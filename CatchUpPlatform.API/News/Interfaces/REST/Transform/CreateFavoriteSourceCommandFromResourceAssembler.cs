@@ -6,7 +6,7 @@ namespace CatchUpPlatform.API.News.Interfaces.REST.Transform;
 /// <summary>
 /// 
 /// </summary>
-public class CreateFavoriteSourceCommandFromResourceAssembler
+public static class CreateFavoriteSourceCommandFromResourceAssembler
 {
     /// <summary>
     /// 
