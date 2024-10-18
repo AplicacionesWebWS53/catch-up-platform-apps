@@ -4,6 +4,7 @@ using CatchUpPlatform.API.News.Domain.Repositories;
 using CatchUpPlatform.API.News.Domain.Services;
 using CatchUpPlatform.API.News.Infrastructure.Repositories;
 using CatchUpPlatform.API.Shared.Domain.Repositories;
+using CatchUpPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration;
 using CatchUpPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using CatchUpPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -17,8 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 //Configure Kebab Case Route Naming Convention
-// todo: Create KebabCaseRouteNamingConvention
-//builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()));
+builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
