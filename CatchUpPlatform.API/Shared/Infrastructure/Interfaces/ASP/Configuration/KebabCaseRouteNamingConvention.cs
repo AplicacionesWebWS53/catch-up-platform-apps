@@ -15,10 +15,10 @@ public class KebabCaseRouteNamingConvention : IControllerModelConvention
     /// The selector model to replace the route template in
     /// </param>
     /// <param name="name">
-    /// The name of the controller.
+    /// The name of the controller to kebab-case.
     /// </param>
     /// <returns>
-    /// The updated attribute route model with the controller.
+    /// The updated attribute route model with the kebab-cased controller name.
     /// </returns>
     private static AttributeRouteModel? ReplaceControllerTemplate(SelectorModel selector, string name)
     {

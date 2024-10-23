@@ -100,7 +100,7 @@ public class FavoriteSourcesController (
     /// <returns>
     /// A <see cref="FavoriteSourceResource"/> object for the given news API Key and Source ID if found, otherwise NotFound
     /// </returns>
-    private async Task<ActionResult> getFavoriteSourceByNewsApiKeyAndSourceId(string newsApiKey, string sourceId)
+    private async Task<ActionResult> GetFavoriteSourceByNewsApiKeyAndSourceId(string newsApiKey, string sourceId)
     {
         var getFavoriteSourceByNewsApiKeyAndSourceIdQuery = 
             new GetFavoriteSourceByNewsApiKeyAndSourceIdQuery(newsApiKey, sourceId);
@@ -130,10 +130,10 @@ public class FavoriteSourcesController (
     [HttpGet]
     public async Task<ActionResult> GetFavoriteSourceFromQuery (
         [FromQuery] string newsApiKey, 
-        [FromQuery] string sourceId)
+        [FromQuery] string sourceId = "")
     {
         return string.IsNullOrEmpty(sourceId)
             ? await GetAllFavoriteSourcesByNewsApiKey(newsApiKey)
-            : await getFavoriteSourceByNewsApiKeyAndSourceId(newsApiKey, sourceId);
+            : await GetFavoriteSourceByNewsApiKeyAndSourceId(newsApiKey, sourceId);
     }
 }

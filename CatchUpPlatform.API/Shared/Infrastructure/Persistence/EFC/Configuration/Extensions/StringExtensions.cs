@@ -3,10 +3,10 @@ using Humanizer;
 namespace CatchUpPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 /// <summary>
-/// String Extensions
+/// String Extensions 
 /// </summary>
 /// <remarks>
-/// This class contains extension methods for string
+/// This class contains extension methods for string.
 /// </remarks>
 
 public static class StringExtensions
